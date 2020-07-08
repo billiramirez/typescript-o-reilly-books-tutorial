@@ -1,0 +1,23 @@
+{
+  "name": "typescript-o-reilly-books-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billiramirez/typescript-o-reilly-books-tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/billiramirez/typescript-o-reilly-books-tutorial/issues"
+  },
+  "homepage": "https://github.com/billiramirez/typescript-o-reilly-books-tutorial#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
