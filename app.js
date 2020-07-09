@@ -1,11 +1,14 @@
-function add(n1, n2, showResult, phrase) {
-    if (showResult) {
-        console.log(phrase + " " + (n1 + n2));
+function combine(input1, input2) {
+    var result;
+    if (typeof input1 === "number" && typeof input2 === "number") {
+        result = input1 + input2;
     }
-    return n1 + n2;
+    else {
+        result = input1.toString() + input2.toString();
+    }
+    return result;
 }
-var number1 = 5;
-var number2 = 4.4;
-var printResult = true;
-var resultPhrase = "Result is: ";
-add(number1, number2, printResult, resultPhrase);
+var combinedAges = combine(39, 30);
+console.log(combinedAges);
+var combinedNames = combine("Max", "Anna");
+console.log(combinedNames);
