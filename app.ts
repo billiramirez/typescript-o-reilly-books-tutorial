@@ -1,14 +1,22 @@
-const person: {
-  name: string;
-  age: number;
-  hobbies: string[];
-  role: [number, string];
-} = {
-  name: "Billi",
-  age: 22,
-  hobbies: ["Sports", "Cooking"],
-  role: [2, "author"],
-};
+enum Role {
+  ADMIN,
+  READ_ONLY,
+  AUTHOR,
+}
+
+const person =
+  // : {
+  //   name: string;
+  //   age: number;
+  //   hobbies: string[];
+  //   role: [number, string];
+  // }
+  {
+    name: "Billi",
+    age: 22,
+    hobbies: ["Sports", "Cooking"],
+    role: Role.ADMIN,
+  };
 
 let favoriteActivities: string[];
 favoriteActivities = ["Sport"];
