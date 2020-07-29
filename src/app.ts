@@ -1,55 +1,27 @@
-class Department {
-  private employees: string[] = [];
+// Interface as a function type
 
-  constructor(private readonly id: string, public name: string) {}
-
-  describe(this: Department) {
-    console.log(`Department: ${this.id} - ${this.name}`);
-  }
-
-  addEmployee(employee: string) {
-    this.employees.push(employee);
-  }
-
-  printEmployeeInformation() {
-    console.log(this.employees.length);
-    console.log(this.employees);
-  }
+interface AddFn {
+  (a: number, b: number): number;
 }
 
-class ITDepartment extends Department {
-  admins: string[];
+let add: AddFn;
 
-  constructor(id: string, admins: string[]) {
-    super(id, "IT");
-    this.admins = admins;
-  }
+add = (n1: number, n2: number) => {
+  return n1 + n2;
+};
+
+interface Person {
+  name: string;
+  age: number;
+  greet(phrase: string): void;
 }
 
-class AccountingDepartment extends Department {
-  constructor(id: string, private reports: string[]) {
-    super(id, "Accounting");
-  }
+let user1: Person;
 
-  addReport(text: string) {
-    this.reports.push(text);
-  }
-
-  printReports() {
-    console.log(this.reports);
-  }
-}
-
-const it = new ITDepartment("1", ["Billi"]);
-console.log(it);
-
-it.addEmployee("Billi");
-it.addEmployee("Alexander");
-
-it.printEmployeeInformation();
-
-it.describe();
-
-const accounting = new AccountingDepartment("1", []);
-accounting.addReport("Something went wrong");
-accounting.printReports();
+user1 = {
+  name: "Billi",
+  age: 34,
+  greet(phrase: string) {
+    console.log(phrase);
+  },
+};
