@@ -116,3 +116,14 @@ const userInputElement = document.getElementById(
 )! as HTMLInputElement;
 
 userInputElement.value = "Hi there!";
+
+// INDEX Properties
+
+interface ErrorContainer {
+  [prop: string]: string;
+}
+
+const errorBag: ErrorContainer = {
+  email: "You need to provide an email",
+  username: "Must start with a capital character",
+};
