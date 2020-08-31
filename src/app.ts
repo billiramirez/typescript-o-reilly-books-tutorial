@@ -136,3 +136,12 @@ const errorBag: ErrorContainer = {
 
 const result = add(1, 5);
 const helloMessage = add("Hi", " There");
+
+// Optional Chaining
+
+const fetchedUserData = {
+  id: "u1",
+  name: "Max",
+  job: { title: "CEO", description: "My own company" },
+};
+console.log(fetchedUserData?.job?.title);
