@@ -12,4 +12,14 @@ function countAndPrint<T extends Lengthy>(element: T): [T, string] {
   return [element, description];
 }
 
-console.log(countAndPrint("haa")[1]);
+console.log(countAndPrint("haha")[1]);
+
+// Using the keyof
+function extractAndConvert<T extends object, U extends keyof T>(
+  obj: T,
+  key: U
+) {
+  return "Value " + obj[key];
+}
+
+extractAndConvert({ name: "billi" }, "name");
